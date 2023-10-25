@@ -17,7 +17,26 @@ class _IntroHomeState extends State<IntroHome> {
         centerTitle: true,
       ),
       body: const Center(
-        child: Text("Home Page"),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+                "Md Mahfujur Rahman",
+                style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.red
+                ),
+            ),
+            Text(
+              "Lecturer",
+              style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.lightBlue
+              ),
+            ),
+            Text("Varendra University"),
+          ],
+        ),
       ),
     );
   }
