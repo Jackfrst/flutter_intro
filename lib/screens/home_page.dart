@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../utlis/screen_element_test.dart';
+
 class IntroHome extends StatefulWidget {
   const IntroHome({super.key});
 
@@ -16,27 +18,27 @@ class _IntroHomeState extends State<IntroHome> {
         title: const Text("Intro App"),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-                "Md Mahfujur Rahman",
-                style: TextStyle(
-                  fontSize: 30,
-                  color: Colors.red
-                ),
+      body: Column(
+        children: [
+          Container(
+            height: 300,
+            width: 300,
+            color: Colors.black12,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              padding: EdgeInsets.symmetric(horizontal: 50),
+              children: [
+                screenElement("Hello",Colors.blue,20),
+                screenElement("Hello",Colors.red,20),
+                screenElement("Hello",Colors.green,20),
+              ],
             ),
-            Text(
-              "Lecturer",
-              style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.lightBlue
-              ),
-            ),
-            Text("Varendra University"),
-          ],
-        ),
+          ),
+          const SizedBox(height: 10),
+          Image.asset(
+            "assets/image/joshua-hanson-e616t35Vbeg-unsplash.jpg"
+          )
+        ],
       ),
     );
   }
