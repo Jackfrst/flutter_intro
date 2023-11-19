@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_intro/screens/function_test.dart';
 import 'package:flutter_intro/screens/home_page.dart';
 
 void main() {
@@ -18,7 +19,16 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const IntroHome()
+      // home: const FunctionTest(),
+
+      initialRoute: '/',
+      routes: {
+        // When navigating to the "/" route, build the FirstScreen widget.
+        '/': (context) => const FunctionTest(),
+        // When navigating to the "/second" route, build the SecondScreen widget.
+        '/second': (context) => const IntroHome(),
+      },
+
     );
   }
 }

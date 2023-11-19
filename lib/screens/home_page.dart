@@ -28,16 +28,14 @@ class _IntroHomeState extends State<IntroHome> {
               scrollDirection: Axis.horizontal,
               padding: EdgeInsets.symmetric(horizontal: 50),
               children: [
-                screenElement("Hello",Colors.blue,20),
-                screenElement("Hello",Colors.red,20),
-                screenElement("Hello",Colors.green,20),
+                screenElement("Hello", Colors.blue, 20),
+                screenElement("Hello", Colors.red, 20),
+                screenElement("Hello", Colors.green, 20),
               ],
             ),
           ),
           const SizedBox(height: 10),
-          Image.asset(
-            "assets/image/joshua-hanson-e616t35Vbeg-unsplash.jpg"
-          )
+          Image.asset("assets/image/joshua-hanson-e616t35Vbeg-unsplash.jpg")
         ],
       ),
     );
